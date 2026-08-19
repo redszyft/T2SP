@@ -1,0 +1,7 @@
+trend:
+  degree: 3  # Recommend sticking to cubic splines as they are the smallest that provide sufficient flexibility.
+  n_knots: 5 # Keep the number of knots small (<10)
+periodic:
+  top_k: 5   # Top n frequency components by power
+events:
+  percentile: 99.5  # The distribution threshold for qualifies as an event (from 0 to 100). Depends on the nature of the data
