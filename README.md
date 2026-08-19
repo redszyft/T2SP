@@ -23,6 +23,8 @@ _Note: this part of the method received very little attention
 in the paper, so the implenetation here is custom._
 4.  **Noise Estimation**: The remaining signal is classified as noise.
 
-### Configuration
-The decomposition parameters `config.yaml`
+## Configuration
+The decomposition parameters are set in `config.yaml`
 
+## How to run
+Use the `t2sp` function in `sp.py`. It takes in `x` and `y`, which are the time-series index as a sequence of `int` and the respective values.

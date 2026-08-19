@@ -5,6 +5,7 @@ from events import find_events, SpikeEvent, GaussianEvent
 from noise import find_noise, Noise
 from pathlib import Path
 from pydantic import BaseModel, Field
+from typing import Sequence
 
 class Series(BaseModel):
     trend: BSplineTrend = Field(description='represents the smooth baseline trend of the series over time')
@@ -16,7 +17,7 @@ BASE_DIR = Path(__file__).parent
 with open( BASE_DIR / 'config.yaml') as cfg_file:
     config = yaml.safe_load(cfg_file)
 
-def t2sp(x, y):
+def t2sp(x: Sequence[int], y: Sequence[float]):
     trend_recon, trend_comp = find_trend(x, y, **config['trend'])
     detrended = y - trend_recon
 

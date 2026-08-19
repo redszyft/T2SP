@@ -219,3 +219,4 @@ __marimo__/
 
 *.ipynb
 .DS_Store
+*.png
