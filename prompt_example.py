@@ -1,4 +1,3 @@
-from typing import get_args
 from sp import Series
 
 model_desc = """
